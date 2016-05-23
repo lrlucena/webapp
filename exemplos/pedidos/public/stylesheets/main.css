@@ -1,0 +1,11 @@
+table {
+  background-color: lightGreen;
+}
+
+td, th{
+  padding: 10px;
+}
+
+.numero {
+  text-align: right;
+}

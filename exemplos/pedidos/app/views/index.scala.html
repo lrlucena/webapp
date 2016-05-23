@@ -1,0 +1,34 @@
+@(cliente: Cliente, itens: List[Item], total: Double)
+
+@dinheiro(a: Double) = {
+  R$@("%.2f" format a)
+}
+@codigo(a: Int) = @{
+  "%06d" format a
+}
+@main("Welcome to Play") {
+<h1>Pedido</h1>
+<h2>Cliente: <b>@cliente.nome</b></h2>
+<table>
+  <tr>
+    <th>Código</th>
+    <th>Nome</th>
+    <th>Preço Unitário</th>
+    <th>Quantidade</th>
+    <th>Preço Total</th>
+  </tr>
+@for(item <- itens){
+  <tr>
+    <td class="numero">@codigo(item.codigo)</td>
+    <td>@item.nome</td>
+    <td class="numero">@dinheiro(item.preco)</td>
+    <td class="numero">@item.quantidade</td>
+    <td class="numero">@dinheiro(item.preco * item.quantidade)</td>
+  </tr>
+}
+  <tr>
+    <th colspan="4">Total</th>
+    <th class="numero">@dinheiro(total)</th>
+  </tr>
+</table>
+}
