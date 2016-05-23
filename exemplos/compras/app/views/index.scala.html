@@ -1,0 +1,23 @@
+@(lista: List[String])
+
+@main("Lista de Compras") {
+  <h1>Lista de Compras</h1>
+  <form action="/inserir">
+    <label for="produto">Produto:</label>
+    <input type="text" name="produto" id="produto" autofocus="">
+    <button type="submit">Inserir</button>
+  </form>
+  <hr>
+  <form>
+  <ul class="list-group">
+  @for(produto <- lista){
+    <li class="list-group-item">@produto
+      <button type="submit" class="close" aria-label="Close"
+              name="produto" value="@produto" formaction="/remover">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </li>
+  }
+</ul>
+</form>
+}
