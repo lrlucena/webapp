@@ -1,0 +1,11 @@
+@(a: Int, b: Int, c: Int)
+
+@main("Calculadora") {
+
+<h1>Soma</h1>
+<form action="somar" method="get">
+  <input type="text" name="x" value="@a"> +
+  <input type="text" name="y" value="@b">
+  <button type="submit">=</button> @c
+</form>
+}
