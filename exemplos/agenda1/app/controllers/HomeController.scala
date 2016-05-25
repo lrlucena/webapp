@@ -12,21 +12,27 @@ class HomeController @Inject() extends Controller {
     request.body.asFormUrlEncoded.map {
       a => a(campo)(0)
     }.getOrElse("")
-  
-  private def inteiro(campo: String)(implicit request: Request[AnyContent]) = texto(campo).toInt
+/*
+  Some(Map("nome" -> List("eu"), "email" -> List("eu@ifrn.edu.br"),
+  "opcionais"->List("monitor")))
+  Some("eu")  => "eu"
+  None        =>  ""
+
+  Option[Map[String, Seq[String]]]
+*/  
+  private def inteiro(campo: String)(implicit request: Request[AnyContent]) = 
+    texto(campo).toInt
 
   def index = Action {
     Ok(views.html.index("Your new application is ready."))
   }
   
   def todos(implicit request: Request[AnyContent]) = {
-      val campos = request.body.asFormUrlEncoded.getOrElse(Map())
-      val lista = for(campo <- campos) yield {
-          val chave = campo._1
-          val valor = campo._2.mkString(", ")
-          s"${chave}: [${valor}]"
-      }
-      lista.mkString("\n")
+    val campos = request.body.asFormUrlEncoded.getOrElse(Map())
+    val lista = for((chave,valor) <- campos) yield {
+                  s"${chave}: [${valor.mkString(", ")}]"
+                }
+    lista.mkString("\n")
   }
 
   def form = Action { implicit request =>
@@ -34,5 +40,4 @@ class HomeController @Inject() extends Controller {
     val r = texto("email")
     Ok(s"$s - $r\n$todos")
   }
-
 }

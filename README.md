@@ -1,16 +1,15 @@
-# Desenvolvimento de Aplicação Web com Play 2.5 usando Scala
-
+# Aplicações Web usando Play 2.5 com Scala
 
 ## Conteúdo
 
 ### Aplicações Web
 
-### Linguage Scala
+### Linguagem Scala
 
 ### Play Framework
 
 ### Básico
-  - Ações, controladores e Resultados
+  - Ações, Controladores e Resultados
   - Rotas
   - Gerando resultados
   - Criando páginas HTML com Twirl
