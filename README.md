@@ -3,8 +3,8 @@
 ## Conteúdo
 
 ### Aplicações Web
-  - [Engenharia Web](conteudo/aplicacoesweb)
-  - [Protocolo HTTP](conteudo/http)
+  - [Engenharia Web](conteudo/aplicacoesweb.md)
+  - [Protocolo HTTP](conteudo/http.md)
   - HTML
 
 ### Play Framework
