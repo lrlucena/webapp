@@ -5,11 +5,22 @@
 ### Aplicações Web
   - [Engenharia Web](conteudo/aplicacoesweb.md)
   - [Protocolo HTTP](conteudo/http.md)
-  - HTML
+  - [HTML](conteudo/html.md)
 
 ### Play Framework
+  - O que é o Play Framework
+  - Instalação
+  - Primeiros Passos
 
 ### Linguagem Scala
+  - Instalação
+  - Programação Funcional
+  - Estruturas Básicas
+  - Classes e Objetos
+  - Herança, Traits e Classes Abstratas
+  - Listas, Tuplas e Options
+  - Coleções
+  - Um pouco de Açucar Sintático
 
 ### Básico
   - Ações, Controladores e Resultados

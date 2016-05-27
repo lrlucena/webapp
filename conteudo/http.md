@@ -20,7 +20,7 @@ Veja os tipos de [Respostas](https://www.w3.org/Protocols/rfc2616/rfc2616-sec6.h
 
 ### Protocolo HTTP
 
-Use o programa cURL para preencher as tabelas a seguir
+Use o programa [cURL](https://curl.haxx.se/) para preencher as tabelas a seguir
 > Exemplo: <code>curl -v http://www.ifrn.edu.br > corpo.html</code>
 
 ### 1. http://www.ifrn.edu.br
