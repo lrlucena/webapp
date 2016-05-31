@@ -1,0 +1,24 @@
+@()
+
+@main("Configuração") {
+
+  <form action="/selecionar" method="post">
+    <legend>Configuração</legend>
+    <p>Preço</p>
+    <label>Processador</label>
+    <label><input type="radio" name="processador" value="i3">i3</label>
+    <label><input type="radio" name="processador" value="i5">i5 + R$200</label>
+    <label><input type="radio" name="processador" value="i7">i7 + R$500</label>
+    <br>
+    <label>Memória</label>
+    <label><input type="radio" name="memoria" value="4gb">4 GB</label>
+    <label><input type="radio" name="memoria" value="8gb">8 GB + R$150</label>
+    <label><input type="radio" name="memoria" value="16gb">16 GB + R$250</label>
+    <br>
+    <label>Opcionais</label>
+    <label><input type="checkbox" name="opcionais" value="mouse">mouse + R$45</label>
+    <label><input type="checkbox" name="opcionais" value="teclado">teclado + R$80</label>
+    
+    <button type="submit">Enviar</button>
+  </form>
+}

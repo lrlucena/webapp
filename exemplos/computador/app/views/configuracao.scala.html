@@ -1,0 +1,13 @@
+@(processador: String, memoria: String, opcionais: Seq[String], valor: Int)
+
+@main("Configuração") {
+	<h1>Configuração</h1>
+	<ul>
+	<li> Processador: @processador
+	<li> Memória: @memoria GB
+	@for(item <- opcionais){
+		<li>@item
+	}
+	</ul>
+	Total: R$ @valor,00
+}

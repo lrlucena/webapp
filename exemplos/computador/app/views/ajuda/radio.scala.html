@@ -1,0 +1,7 @@
+@(title: String, name: String, itens: (String, String)*)
+
+<label>@title</label>
+    @for((value, label) <- itens) {
+      <label><input type="radio" name="@name" value="@value">@label</label>
+    }
+<br>

@@ -1,0 +1,13 @@
+@()
+
+@import ajuda._ 
+
+@main("Configuração") {
+  
+  @form("/selecionar", "Configuração"){
+    @radio("Processador","processador","i3"->"i3","i5"->"i5 + R$200","i7"->"i7 + R$500")
+    @radio("Memória","memoria", "4"->"4 GB", "8" -> "8 GB + R$150", "16" -> "16 GB + R$250")
+    @check("Opcionais","opcionais","mouse"-> "mouse + R$45", "teclado" -> "teclado + R$80")
+  }
+  
+}
