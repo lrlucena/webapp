@@ -1,0 +1,14 @@
+@(computador: Computador)
+
+
+@main("Configuração") {
+	<h1>Configuração</h1>
+	<ul>
+	<li> Processador: @computador.processador
+	<li> Memória: @computador.memoria GB
+	@for(item <- computador.opcionais){
+		<li>@item
+	}
+	</ul>
+	Total: R$ @computador.valor,00
+}
