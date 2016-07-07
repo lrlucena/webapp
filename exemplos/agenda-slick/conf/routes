@@ -1,0 +1,21 @@
+# Routes
+
+# Página Inicial
+GET    /                      controllers.HomeController.index
+
+# Lista de contatos
+GET    /contatos              controllers.HomeController.list(filtro: String?="")
+
+# Adicionar um contato
+GET    /contatos/new          controllers.HomeController.create
+POST   /contatos              controllers.HomeController.save
+
+# Editar um contato existente
+GET    /contatos/:id          controllers.HomeController.edit(id:Long)
+POST   /contatos/:id          controllers.HomeController.update(id:Long)
+
+# Excluir um contato
+POST   /contatos/:id/delete   controllers.HomeController.delete(id:Long)
+
+# Map static resources from the /public folder to the /assets URL path
+GET    /assets/*file          controllers.Assets.versioned(path="/public", file: Asset)

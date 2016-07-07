@@ -7,7 +7,8 @@ import play.api.data._
 import play.api.data.Forms._
 import play.api.i18n.{MessagesApi, I18nSupport}
 
-case class Computador(nome: String, email: String,processador: String, memoria: String, opcionais: List[String]){
+case class Computador(nome: String, email: String,
+processador: String, memoria: String, opcionais: List[String]){
     def valor = 1500
 }
 

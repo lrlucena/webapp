@@ -1,0 +1,24 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Default path will just redirect to the computer list
+GET / controllers.HomeController.index
+
+# Computers list (look at the default values for pagination parameters)
+GET /contatos controllers.HomeController.list
+
+# Add computer
+GET /contatos/new controllers.HomeController.create
+POST /contatos controllers.HomeController.save
+
+# Edit existing computer
+GET /contatos/:id controllers.HomeController.edit(id:Long)
+POST /contatos/:id controllers.HomeController.update(id:Long)
+
+# Delete a computer
+POST /contatos/:id/delete controllers.HomeController.delete(id:Long)
+
+# Map static resources from the /public folder to the /assets URL path
+
+GET  /assets/*file    controllers.Assets.versioned(path="/public", file: Asset)

@@ -15,13 +15,12 @@
     }
     <br>
 }
-@form(action: String, legend: String)(conteudo: Html) ={
+@form(action: String, legend: String)(conteudo: Html) = {
   <form action="@action" method="post">
     <legend>@legend</legend>
     @conteudo
     <button type="submit">Enviar</button>
   </form>
-
 } 
 
 @main("Configuração") {

@@ -1,0 +1,11 @@
+@(contatos: Seq[models.Contato])
+
+@main("Welcome to Play") {
+
+<h1>Funciona</h1> 
+<ol>
+@for(c<-contatos){
+  <li>@c.nome - @c.email	
+}
+</ol>
+}

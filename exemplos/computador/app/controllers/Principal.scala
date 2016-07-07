@@ -7,17 +7,19 @@ import play.api.mvc._
 @Singleton
 class Principal @Inject() extends Controller {
 
-  private def campo(chave: String, default: String = "")(implicit request: Request[AnyContent]) = {
+  private def campo(chave: String,
+    default: String = "")(implicit request: Request[_]) = {
     val form = request.body.asFormUrlEncoded.getOrElse(Map())
-    form.get(chave).map {
-      case Seq(a) => a
+    form.get(chave).map {      // Some(Seq("i3"))
+      case Seq(a) => a         // Some("i3")
       case _      => default
-    }.getOrElse(default)
+    }.getOrElse(default)       // "i3"
   }
 
   private def checkbox(chave: String)(implicit request: Request[AnyContent]) = {
     val form = request.body.asFormUrlEncoded.getOrElse(Map())
-    form.get(chave).getOrElse(Seq())
+    form.get(chave)          // Some(Seq("teclado","Mouse"))
+      .getOrElse(Seq())   // Seq("teclado","mouse")
   }
 
   def index = Action {
@@ -46,6 +48,7 @@ class Principal @Inject() extends Controller {
     val precoMou = if (opcionais.contains("mouse")) 45 else 0
     val valor = 1500 + precoPro + precoMem + precoTec + precoMou
     
-    Ok(views.html.configuracao(processador, memoria, opcionais, valor))
+    Ok(views.html.configuracao(
+        processador, memoria, opcionais, valor))
   }
 }

@@ -13,7 +13,8 @@
 }
 
 @form(action = routes.Principal.selecionar){
-    @inputText(formComp("nome"), '_label -> "Nome", 'placeholder -> "Seu nome")
+    @inputText(formComp("nome"), '_label -> "Nome",
+    'placeholder -> "Seu nome")
     @inputText(formComp("email"), '_label -> "E-mail", 'placeholder -> "seu e-mail")
     @inputRadioGroup(
         formComp("processador"),

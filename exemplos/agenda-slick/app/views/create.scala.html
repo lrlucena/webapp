@@ -1,0 +1,11 @@
+@(formContato: Form[models.Contato])(implicit messages: Messages)
+  
+@main("Welcome to Play") {
+ 
+<h1>Funciona</h1> 
+
+@helper.form(action = routes.HomeController.save()) {
+  @helper.inputText(formContato("nome"))
+  @helper.inputText(formContato("email"))
+}
+}

@@ -1,0 +1,38 @@
+@(lista: Seq[Contato])
+
+@procurar(campo: String)(html: Html) = {
+
+<div class="row">
+  <div class="col-lg-6"><form>
+    <div class="input-group">
+      <input type="text" class="form-control" name="@campo" placeholder="Procurar por...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Procurar</button>
+      </span>
+    </div><!-- /input-group -->
+  </form></div><!-- /.col-lg-6 -->
+  <div class="col-lg-6">@html</div>
+</div><!-- /.row -->
+
+
+}
+
+@main("Contatos"){
+<h1>Lista de Contatos</h1>
+
+@procurar("nome"){<a class="btn btn-default" href="@routes.HomeController.create()" role="button">Novo</a>}
+
+<div class="panel panel-default">
+  <div class="panel-heading">Contatos</div>
+  <table class="table">
+  <tr><th>Nome</th><th>Email</th><th></th></tr>
+  @for(item <- lista) {
+    <tr>
+      <td><a href="">@item.nome</a></td>
+      <td>@item.email</td>
+      <td><a href="/contato/remover/@item.id">Editar</a> <a href="/contato/remover/@item.id">Remover</a></td>
+    </tr>
+  }
+  </table>
+</div>
+}

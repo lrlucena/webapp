@@ -1,0 +1,15 @@
+@(lista: List[Contato])
+
+<h1>Contatos</h1>
+<table>
+<tr><th>Nome</th><th>E-mail</th><th>Telefone</th><th></th></tr>
+@for(item <- lista) {
+  <tr>
+    <td>@item.nome</td>
+    <td>@item.email</td>
+    <td>@item.telefone</td>
+    <td><a href="">Remover</a></td>
+  </tr>
+}
+</table>
+</ul>
