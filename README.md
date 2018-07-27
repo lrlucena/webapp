@@ -1,4 +1,4 @@
-# Aplicações Web usando Play 2.5 com Scala
+# Aplicações Web usando Play 2.6 com ~~Scala~~ Java
 
 ## Conteúdo
 
