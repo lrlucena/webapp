@@ -1,4 +1,4 @@
-# Aplicações Web usando Play 2.6 com ~~Scala~~ Java
+# Aplicações Web usando Play 2.6
 
 ## Conteúdo
 
@@ -11,6 +11,8 @@
   - O que é o Play Framework
   - Instalação
   - Primeiros Passos
+
+### Linguagem Java
 
 ### Linguagem Scala
   - Instalação
