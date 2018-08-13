@@ -68,4 +68,4 @@ Criar uma formatação ideal para uma aplicação é uma tarefa trabalhosa. Aspe
 
 2. Crie um arquivo CSS para a página da questão 1
 
-3. Crie uma com os mesmos elementos qua questão 1 usando o Bootstrap.
+3. Crie uma página com os mesmos elementos da questão 1 usando o Bootstrap.
