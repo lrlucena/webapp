@@ -59,10 +59,13 @@ Criar uma formatação ideal para uma aplicação é uma tarefa trabalhosa. Aspe
 
 ## Exercícios
 
-1. Crie uma página HTML
+1. Crie uma página HTML contendo
+   + Duas imagens
+   + Três links para endereços externos
+   + Uma lista ordenada com pelo menos cinco itens
+   + Uma tabela com pelo menos cinco linhas e trẽs colunas
+   + Um formulário contendo o campo "SearchableText" que envia os dados para "http://portal.ifrn.edu.br/search"
 
 2. Crie um arquivo CSS para a página da questão 1
 
-3. Outra página HTML
-
-4. Altere a página da questão 3 para usar o Bottstrap.
+3. Crie uma com os mesmos elementos qua questão 1 usando o Bootstrap.
